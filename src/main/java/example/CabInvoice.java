@@ -10,11 +10,12 @@ public class CabInvoice {
         return Math.max(totalFare, minimumFare);
     }
 
-    public double calculateFare(Ride[] rides) {
+    public InvoiceSummary calculateFare(Ride[] rides) {
         double totalFare = 0;
         for (Ride ride : rides) {
             totalFare += this.calculateFare(ride.distance, ride.time);
         }
-        return totalFare;
+        System.out.print(new InvoiceSummary(rides.length,totalFare));
+        return new InvoiceSummary(rides.length,totalFare);
     }
 }
