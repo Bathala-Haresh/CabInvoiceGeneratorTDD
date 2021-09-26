@@ -23,15 +23,15 @@ public class CabInvoiceTests {
         Assertions.assertEquals(5, result);
     }
 
-//    @Test
-//    public void givenMultipleRides_shouldReturnTotalAggregate() {
-//        CabInvoice cabInvoice = new CabInvoice();
-//        Ride[] rides = {
-//                new Ride(2.0, 5),
-//                new Ride(0.1, 1)
-//        };
-//        double fare = cabInvoice.calculateFare(rides);
-//        Assertions.assertEquals(30, fare);
-//    }
+    @Test
+    public void givenMultipleRides_shouldReturnTotalAggregate() {
+        CabInvoice cabInvoice = new CabInvoice();
+        Ride[] rides = {
+                new Ride(2.0, 5),
+                new Ride(0.1, 1)
+        };
+        double fare = cabInvoice.calculateFare(rides);
+        Assertions.assertEquals(30, fare);
+    }
 
 }
